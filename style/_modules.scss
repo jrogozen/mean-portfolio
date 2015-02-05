@@ -1,0 +1,40 @@
+#header-main {
+  background-image: url("/modules/core/img/header_background.jpeg");
+  background-size: cover;
+  color: white;
+  padding: 40px 0;
+}
+
+.header-intro {
+  font-family: 'Merriweather', serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: $pink;
+}
+
+.header-lead {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.header-nav {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.social-links {
+  margin: 40px 0;
+}
+
+.global-nav {
+  a {
+    &:link {
+      color: white;
+    }
+    &:visited {
+      color: white;
+    }
+  }
+}

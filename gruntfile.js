@@ -8,7 +8,8 @@ module.exports = function(grunt) {
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
-		mochaTests: ['app/tests/**/*.js']
+		mochaTests: ['app/tests/**/*.js'],
+		sass: ['style/*.scss']
 	};
 
 	// Project Configuration
@@ -47,6 +48,13 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			}, 
+			sass: {
+				files: watchFiles.sass,
+				tasks: ['sass:dev'],
+				options: {
+					livereload: true
+				}
 			}
 		},
 		jshint: {
@@ -54,6 +62,17 @@ module.exports = function(grunt) {
 				src: watchFiles.clientJS.concat(watchFiles.serverJS),
 				options: {
 					jshintrc: true
+				}
+			}
+		},
+		sass: {
+			dev: {
+				options: {
+					style: 'expanded',
+					compass: false
+				},
+				files: {
+					'public/dist/style.css': 'style/style.scss'
 				}
 			}
 		},
@@ -158,7 +177,7 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['lint', 'concurrent:default']);
+	grunt.registerTask('default', ['lint', 'sass:dev', 'concurrent:default']);
 
 	// Debug task.
 	grunt.registerTask('debug', ['lint', 'concurrent:debug']);

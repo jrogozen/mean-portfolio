@@ -1,0 +1,17 @@
+<section class="container content">
+  <h1 class="double-border">Portfolio <small>(placeholder puppies :D)</small></h1>
+  <section class="portfolio-list">
+    <div class="row">
+      <ul class="list-unstyled">
+      <li class="col-sm-12 col-md-4 grid-list-block grid-list-block-images" ng-repeat="site in portfolio">
+        <div class="block-background" style="background: url({{site.img}})">
+          <div class="overlay">
+            <h2 class="image-list-title">{{site.title}}</h2>
+            <p class="image-list-subtitle">{{site.keywords}}</p>
+          </div>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </section>
+</section>

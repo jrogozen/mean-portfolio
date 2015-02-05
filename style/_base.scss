@@ -1,0 +1,36 @@
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+}
+
+h1, h2 {
+  font-weight: bold;
+  letter-spacing: -3px;
+
+  small {
+    letter-spacing: 0;
+    font-weight: normal;
+    font-size: 14px;
+  }
+}
+
+blockquote {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+}
+
+a {
+  transition: color 0.5s;
+  color: inherit;
+  
+  &:hover {
+    color: $pink;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+  }
+}
