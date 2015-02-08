@@ -3,7 +3,7 @@
 module.exports = {
 	db: process.env.MONGOLAB_URI,
 	app: {
-		title: 'Portfolio - Development Environment'
+		title: 'jonrogozen.com | portfolio'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
