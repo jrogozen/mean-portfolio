@@ -2,9 +2,9 @@
 
 module.exports = {
 	app: {
-		title: 'Portfolio',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-		keywords: 'MongoDB, Express, AngularJS, Node.js'
+		title: 'jon rogozen | portfolio',
+		description: 'Front-End Web Developer',
+		keywords: 'front end, blog, software developer, angular, jquery, sass, node'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
