@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://jon:thatswhatimtalkingabout@ds031741.mongolab.com:31741/jrogozen-blog',
+	db: process.env.MONGOLAB_URI,
 	app: {
 		title: 'Portfolio - Development Environment'
 	},

@@ -213,7 +213,7 @@ a:hover {
   background-image: url("/modules/core/img/header_background.jpeg");
   background-size: cover;
   color: white;
-  padding: 40px 0;
+  padding: 200px 0;
 }
 
 .header-intro {
@@ -244,6 +244,9 @@ a:hover {
 }
 .global-nav a:visited {
   color: white;
+}
+.global-nav a:hover {
+  color: #ff6b6b;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@ angular.module('portfolio').directive('websitesList', function() {
 
       $scope.viewList = function() {
         $scope.mode = 'list';
-      }
+      };
 
       $scope.mode = 'list';
     }],
