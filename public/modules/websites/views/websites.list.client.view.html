@@ -1,17 +1,37 @@
 <section class="container content">
   <h1 class="double-border">Portfolio <small>(placeholder puppies :D)</small></h1>
+
   <section class="portfolio-list">
-    <div class="row">
-      <ul class="list-unstyled">
-      <li class="col-sm-12 col-md-4 grid-list-block grid-list-block-images" ng-repeat="site in portfolio">
-        <div class="block-background" style="background: url({{site.img}})">
-          <div class="overlay">
-            <h2 class="image-list-title">{{site.title}}</h2>
-            <p class="image-list-subtitle">{{site.keywords}}</p>
+    <div class="row" ng-switch on="mode">
+
+      <div ng-switch-when="list" class="list">
+        <ul class="list-unstyled">
+        <li class="col-sm-12 col-md-4 grid-list-block grid-list-block-images" ng-repeat="site in portfolio">
+          <div ng-click="setFocus(site)" class="block-background" style="background: url({{site.img}})">
+            <div class="overlay">
+              <h2 class="image-list-title">{{site.title}}</h2>
+              <p class="image-list-subtitle">{{site.keywords}}</p>
+            </div>
           </div>
-        </div>
-      </li>
-      </ul>
+        </li>
+        </ul>
+      </div>
+
+      <div ng-switch-when="single" class="single">
+        <aside class="col-sm-12 col-md-7">
+          <img class="img-full hover-gray" ng-src="{{site.img}}"/>
+        </aside>
+        <article class="col-sm-12 col-md-5 portfolio-single-content">
+          <h1><a target="_blank" href="{{site.url || site.github}}">{{site.title}}</a></h1>
+          <p class="lead">{{site.keywods}}</p>
+          <p>{{site.description}}</p>
+          <ul class="nav-list medium-margin">
+            <li><a target="_blank" href="{{site.github}}"><i class="fa fa-github-alt fa-large"></i></a></li>
+            <li><a href ng-click="viewList()">back to portfolio</a></li>
+          </ul>
+        </article>
+      </div>
+
     </div>
   </section>
 </section>

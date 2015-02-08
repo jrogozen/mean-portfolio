@@ -10,6 +10,17 @@ angular.module('portfolio').directive('websitesList', function() {
       $scope.getPortfolio = function() {
         $scope.portfolio = Portfolio.get;
       };
+
+      $scope.setFocus = function(site) {
+        $scope.site = site;
+        $scope.mode = 'single';
+      };
+
+      $scope.viewList = function() {
+        $scope.mode = 'list';
+      }
+
+      $scope.mode = 'list';
     }],
     link: function(scope, element, attrs) {
       scope.getPortfolio();
