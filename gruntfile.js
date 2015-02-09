@@ -84,16 +84,16 @@ module.exports = function(grunt) {
 				src: watchFiles.clientCSS
 			}
 		},
-		// uglify: {
-		// 	production: {
-		// 		options: {
-		// 			mangle: false
-		// 		},
-		// 		files: {
-		// 			'public/dist/application.min.js': 'public/dist/application.js'
-		// 		}
-		// 	}
-		// },
+		uglify: {
+			production: {
+				options: {
+					mangle: false
+				},
+				files: {
+					'public/dist/application.min.js': 'public/dist/application.js'
+				}
+			}
+		},
 		cssmin: {
 			combine: {
 				files: {
@@ -124,13 +124,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// ngAnnotate: {
-		// 	production: {
-		// 		files: {
-		// 			'public/dist/application.js': '<%= applicationJavaScriptFiles %>'
-		// 		}
-		// 	}
-		// },
+		ngAnnotate: {
+			production: {
+				files: {
+					'public/dist/application.js': '<%= applicationJavaScriptFiles %>'
+				}
+			}
+		},
 		concurrent: {
 			default: ['nodemon', 'watch'],
 			debug: ['nodemon', 'watch', 'node-inspector'],
