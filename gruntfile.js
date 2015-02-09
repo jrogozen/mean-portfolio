@@ -84,23 +84,6 @@ module.exports = function(grunt) {
 				src: watchFiles.clientCSS
 			}
 		},
-		uglify: {
-			production: {
-				options: {
-					mangle: false
-				},
-				files: {
-					'public/dist/application.min.js': 'public/dist/application.js'
-				}
-			}
-		},
-		cssmin: {
-			combine: {
-				files: {
-					'public/dist/application.min.css': '<%= applicationCSSFiles %>'
-				}
-			}
-		},
 		nodemon: {
 			dev: {
 				script: 'server.js',
