@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('portfolio').directive('websitesList', function() {
+angular.module('portfolio').directive('jrWebsitesList', function() {
   return {
     restrict: 'A',
     scope: {
     },
-    templateUrl: '/modules/websites/views/websites.list.client.view.html',
+    templateUrl: '/modules/websites/views/websites.client.view.html',
     controller: ['$scope', 'Websites', function($scope, Portfolio) {
       $scope.getPortfolio = function() {
         $scope.portfolio = Portfolio.get;

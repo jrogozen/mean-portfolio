@@ -3,6 +3,9 @@
 angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
 	function($scope, $stateParams, $location, Authentication, Articles) {
 		$scope.authentication = Authentication;
+		
+		console.log($scope.Authentication);
+		console.log(Authentication.isAdmin());
 
 		$scope.create = function() {
 			var article = new Articles({

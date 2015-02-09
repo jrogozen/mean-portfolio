@@ -9,6 +9,19 @@ angular.module('users').factory('Authentication', [
 			user: window.user
 		};
 
-		return _this._data;
+    function isAdmin() {
+      var user = _this._data.user;
+      
+      if(_.contains(user.roles, 'admin')) {
+        return true;
+      }
+
+      return false;
+    }
+
+		return {
+      isAdmin: isAdmin,
+      auth: _this._data
+    };
 	}
 ]);

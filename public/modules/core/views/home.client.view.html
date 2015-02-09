@@ -1,9 +1,43 @@
 <section data-ng-controller="HomeController">
 	
-	<section id="about" class="about" ui-view="about"></section>
+	<section id="about" class="about">
+    <div class="container content">
+      <h1 class="double-border">Get To Know Me</h1>
+      <p class="large-margin lead">
+        Developer comfortable working with Javascript, Ruby, and sushi lunches. I enjoy programming, design, hiking, beer, Louis CK, and Flight of the Conchords.
+      </p>
+      <section class="about-list">
+        <div class="row">
+          <ul class="list-unstyled">
+            <li class="col-sm-12 col-md-4 grid-list-block" ng-repeat="block in blocks">
+              <h2 class="list-title">{{block.title}}</h2>
+              <p>{{block.content}}</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
 
-	<section id="portfolio" class="portfolio panel-colored" websites-list></section>
+	<section id="portfolio" class="portfolio panel-colored" jr-websites-list></section>
 	
-	<section id="connect" class="connect" ui-view="connect"></section>
+  <section id="connect" class="connect">
+    <div class="container content">
+      <h1 class="double-border">Connect</h1>
+      <section class="row">
+        <section class="col-sm-12 col-md-7 social-blurb">
+          <h2 class="list-title">Jon Rogozen</h2>
+          <p>25 year old software developer, drinking game connoisseur, eclectic music lover, runner, professional donut eater, and naturally talented puppy-admirer.</p>
+
+          <jr-connect></jr-connect>
+        </section>
+
+        <section class="col-sm-12 col-sm-5">
+          <h2 class="list-title">Blog Feeed</h2>
+          <p>Looks like there's no blog posts yet...</p>
+        </section>
+      </section>
+    </div>
+  </section>
 
 </section>
