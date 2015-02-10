@@ -2,21 +2,22 @@
 
 angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
 	function($scope, $stateParams, $location, Authentication, Articles) {
-		$scope.authentication = Authentication;
+		$scope.authentication = Authentication.uth;
 		
-		console.log($scope.Authentication);
 		console.log(Authentication.isAdmin());
 
 		$scope.create = function() {
 			var article = new Articles({
 				title: this.title,
-				content: this.content
+				content: this.content,
+				category: this.category
 			});
 			article.$save(function(response) {
 				$location.path('articles/' + response._id);
 
 				$scope.title = '';
 				$scope.content = '';
+				$scope.category = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
