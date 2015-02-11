@@ -219,6 +219,10 @@ table thead tr {
   color: #93cc8a;
 }
 
+.content-blog {
+  font-family: 'Montserrat', sans-serif;
+}
+
 #header-main {
   background-image: url("/modules/core/img/header_background.jpeg");
   background-size: cover;
