@@ -2,7 +2,7 @@
 
 angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
 	function($scope, $stateParams, $location, Authentication, Articles) {
-		$scope.authentication = Authentication.uth;
+		$scope.authentication = Authentication.auth;
 		
 		console.log(Authentication.isAdmin());
 

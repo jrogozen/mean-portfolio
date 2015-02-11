@@ -29,9 +29,9 @@ var ArticleSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
-	category: {
-		type: String,
-		default: 'General'
+	visibility: {
+		type: Boolean,
+		default: true
 	}
 });
 

@@ -1,0 +1,11 @@
+<section data-ng-controller="CategoriesController" class="content" ng-init="find()">
+  <h1>Categories</h1>
+  <section ng-show="error" class="alert alert-danger">{{error}}</section>
+  <ul class="list-unstyled">
+    <li ng-repeat="cat in categories">
+    <section>
+      <h2>{{cat.title}}</h2>
+    </section>
+    </li>
+  </ul>
+</section>

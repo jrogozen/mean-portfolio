@@ -1,0 +1,11 @@
+<section data-ng-controller="CategoriesController" class="content">
+  <h1>Create Category</h1>
+  <section ng-show="error" class="alert alert-danger">{{error}}</section>
+  <form data-ng-submit="create()">
+    <div class="form-group">
+      <label>Category Title</label>
+      <input class="form-control" type="text" data-ng-model="title"/>
+    </div>
+    <button class="btn btn-success">Save</button>
+  </form>
+</section>
