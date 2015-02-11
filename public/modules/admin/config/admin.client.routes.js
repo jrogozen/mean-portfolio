@@ -13,7 +13,7 @@ angular.module('admin').config(['$stateProvider',
       templateUrl: 'modules/admin/views/admin-list-articles.client.view.html'
     }).
     state('admin.articles-create', {
-      url: '',
+      url: '/articles/create',
       templateUrl: 'modules/admin/views/admin-create-article.client.view.html'
     }).
     state('admin.articles-edit', {

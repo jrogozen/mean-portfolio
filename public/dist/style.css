@@ -33,6 +33,12 @@ a:hover {
   border-bottom: 1px dotted;
 }
 
+table thead tr {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
 .indent {
   margin: 0;
   margin-left: 10px;
@@ -207,6 +213,10 @@ a:hover {
 }
 .reverse-link:hover {
   color: white;
+}
+
+.success {
+  color: #93cc8a;
 }
 
 #header-main {

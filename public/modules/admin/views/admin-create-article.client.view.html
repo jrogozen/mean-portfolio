@@ -1,0 +1,21 @@
+<section class="content" data-ng-controller="ArticlesController">
+  <h1>New Article</h1>
+  <section ng-show="error" class="alert alert-danger">{{error}}</section>
+  <form data-ng-submit="create()">
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+        <input name="title" type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="content">Content</label>
+      <div class="controls">
+        <textarea name="content" data-ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success">Save</button>
+    </div>
+  </form>
+</section>
