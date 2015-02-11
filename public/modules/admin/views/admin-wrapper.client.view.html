@@ -1,7 +1,9 @@
 <div data-ng-controller="AdminController" class="container">
   <jr-admin-panel></jr-admin-panel>
+
   <section class="content" ng-if="!admin">
     <h1>You are not authorized.</h1>
   </section>
+  
   <section ng-if="admin" ui-view/>
 </div>

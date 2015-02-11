@@ -1,21 +1,23 @@
-<div class="container" data-ng-controller="HeaderController">
-	<section class="col-sm-12 col-md-8 header-content">
-		<h1 class="depth" title="jonrogozen">jonrogozen</h1>
-		<p class="header-intro">
-			frontend web developer
-		</p>
-		<div class="medium-margin header-lead">
-			if(programming) {
-      return [<span class="magnify-text">"javascript",</span> <span class="magnify-text">"ruby",</span> <span class="magnify-text">"angular",</span> <span class="magnify-text">"jquery",</span> <span class="magnify-text">"rails",</span> <span class="magnify-text">"node",</span> <span class="magnify-text">"sass",</span> <span class="magnify-text">"gulp",</span> <span class="magnify-text">"mongo",</span> <span class="magnify-text">"postgres"</span>];
-      }
-		</div>
-		<nav class="small-margin header-nav">
-			<ul class="nav-list global-nav">
-        <li><a href="#about" du-smooth-scroll>about</a></li>
-        <li><a href="#portfolio" du-smooth-scroll>portfolio</a></li>
-        <li><a href="#connect" du-smooth-scroll>connect</a></li>
-        <!-- <li><a class="reverse-link" href="">blog</a></li> -->
-      </ul>
-		</nav>
-	</section>
+<div data-ng-controller="HeaderController" ng-class="{home: header-home}" class="header-main">
+  <div class="container">
+  	<section class="col-sm-12 col-md-8 header-content">
+  		<h1 class="depth" title="jonrogozen">jonrogozen</h1>
+  		<p class="header-intro">
+  			frontend web developer
+  		</p>
+  		<div class="medium-margin header-lead">
+  			if(programming) {
+        return [<span class="magnify-text">"javascript",</span> <span class="magnify-text">"ruby",</span> <span class="magnify-text">"angular",</span> <span class="magnify-text">"jquery",</span> <span class="magnify-text">"rails",</span> <span class="magnify-text">"node",</span> <span class="magnify-text">"sass",</span> <span class="magnify-text">"gulp",</span> <span class="magnify-text">"mongo",</span> <span class="magnify-text">"postgres"</span>];
+        }
+  		</div>
+  		<nav class="small-margin header-nav">
+  			<ul class="nav-list global-nav">
+          <li><a href="#about" du-smooth-scroll>about</a></li>
+          <li><a href="#portfolio" du-smooth-scroll>portfolio</a></li>
+          <li><a href="#connect" du-smooth-scroll>connect</a></li>
+          <!-- <li><a class="reverse-link" href="">blog</a></li> -->
+        </ul>
+  		</nav>
+  	</section>
+  </div>
 </div>

@@ -223,11 +223,15 @@ table thead tr {
   font-family: 'Montserrat', sans-serif;
 }
 
-#header-main {
+.header-main {
   background-image: url("/modules/core/img/header_background.jpeg");
   background-size: cover;
   color: white;
-  padding: 200px 0;
+  padding: 40px 0;
+}
+
+.header-home {
+  padding: 250px 0 !important;
 }
 
 .header-intro {
